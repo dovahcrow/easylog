@@ -8,7 +8,7 @@ import (
 	"strings"
 )
 
-var confName = `conf/cms.conf`
+var ConfName = ``
 var log *logs.BeeLogger
 var (
 	LogCapacity    int64
@@ -24,7 +24,7 @@ var (
 
 func init() {
 	//defer func() { go log.StartLogger() }()
-	conf, err := config.NewConfig(`ini`, confName)
+	conf, err := config.NewConfig(`ini`, ConfName)
 	if err != nil {
 		fmt.Println(`open config file fail:`, err)
 		os.Exit(1)
